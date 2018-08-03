@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="api.dbAccess">
+    <select id="selectTableStruture" resultType="java.util.Map">
+        SELECT
+			    column_name,
+			    data_type
+			FROM
+			    all_tab_cols
+			WHERE
+				owner = '${owner}' AND
+			    table_name = '${tableName}'
+    </select>
+    <select id="executeQuery" resultType="java.util.Map">
+            SELECT *
+			FROM
+			   ${owner}.${tableName}
+			${filters}
+    </select>
+
+</mapper>
