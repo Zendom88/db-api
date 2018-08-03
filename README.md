@@ -8,8 +8,8 @@
 ## Parameters:
 * objName: Object Name (table/view) needs to fetch. Use with schema name if not in the current schema.
 * filters:
-** where condition to customize your query. E.g: "filters=WHERE ROWNUM<5"
-** only applicable for **/data** Endpoint
+- where condition to customize your query. E.g: "filters=WHERE ROWNUM<5"
+- only applicable for **/data** Endpoint
 
 ## Set up:
 * Create **app.properties** file in the same format as **app_sample.properties** and provide database information for connection.
